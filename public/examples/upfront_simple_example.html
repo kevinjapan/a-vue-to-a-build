@@ -1,0 +1,17 @@
+<html>
+<head>
+   <title>what you need to know</title>
+</head>
+
+<body style="padding:5rem;">
+   <input class="title_input" type="text" />
+   <h1 id="heading">enter new text above</h1>
+</body>
+
+<script>
+document.querySelector('.title_input').addEventListener('keydown',() => {
+   document.getElementById('heading').innerText = document.querySelector('.title_input').value
+})
+</script>
+
+</html>
