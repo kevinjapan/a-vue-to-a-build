@@ -15,12 +15,14 @@
    --status-msg-top: 160px;
    --app-status-z-index: 9999;
 }
-*,
-*::before,
-*::after {
+html {
+   scroll-behavior:smooth;
    box-sizing: border-box;
-   margin: 0;
 }
+*, *:before, *:after {
+   box-sizing: inherit;
+}
+
 
 body {
    min-height: 100vh;
@@ -49,9 +51,7 @@ body {
    -moz-osx-font-smoothing: grayscale;
 }
 
-html {
-   scroll-behavior:smooth;
-}
+
 a {
   font-weight: 500;
   color: #646cff;
