@@ -15,7 +15,7 @@
 <style scoped>
 
 section.aspect_view {
-   margin-top:5rem;
+   margin-top:2rem;
 }
 
 h1 {

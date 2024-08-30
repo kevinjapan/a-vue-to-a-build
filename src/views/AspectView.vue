@@ -65,7 +65,7 @@ so we need to pre-set these styles earlier - see markdown.css
 section.aspect_view {
    width:100%;
    margin:0;
-   margin-top:1rem;
+   margin-top:1.5rem;
    padding:0;
    text-align:left;
 }
