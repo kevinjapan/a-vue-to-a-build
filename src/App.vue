@@ -41,7 +41,7 @@ const open_nav_link = route => {
          <ul style="display:flex;flex-direction:column;">
 
             
-            <li><a @click="open_nav_link('/aspects/intro')">Home</a></li>
+            <li><a @click="open_nav_link('/aspects/intro')">intro</a></li>
             <li><a @click="open_nav_link('/aspects/upfront')">what you need to know</a></li>
             <li><a @click="open_nav_link('/aspects/goal')">the goal</a></li>
             <li><a @click="open_nav_link('/aspects/api-choice')">an early challenge</a></li>
