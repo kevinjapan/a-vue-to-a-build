@@ -35,7 +35,11 @@ watch(notification_msg, () => {
    left:0;
    right:0;
    z-index:var(--app-status-z-index);
+
+   width:-webkit-fit-content;
+   width:-moz-fit-content;
    width:fit-content;
+   
    margin-left:auto;
    margin-right:auto;
    padding:1rem;
