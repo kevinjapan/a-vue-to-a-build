@@ -1,11 +1,10 @@
+
+/* to do : on-going : safari issue is not w/ this file */
+
 :root {
    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
    line-height: 1.5;
    font-weight: 400;
-
-   color-scheme: light dark;
-   color: rgba(255, 255, 255, 0.87);
-   background-color: #242424;
 
    font-synthesis: none;
    text-rendering: optimizeLegibility;
@@ -17,20 +16,22 @@
 }
 html {
    scroll-behavior:smooth;
+
+   /* to do : rollout webkit this to other projects */
+   -webkit-box-sizing: border-box;
    box-sizing: border-box;
 }
 *, *:before, *:after {
+   /* to do : rollout webkit this to other projects */
+   -webkit-box-sizing: inherit;
    box-sizing: inherit;
 }
-
-
 body {
+   margin: 0;
+   width:100%;
    min-height: 100vh;
    color: var(--color-text);
-   background: var(--color-background);
-   transition:
-      color 0.5s,
-      background-color 0.5s;
+   background: var(--color-background);background:yellow;
    line-height: 1.6;
    font-family:
       Inter,
@@ -53,33 +54,22 @@ body {
 
 
 a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
+   font-weight: 500;
+   color: #646cff;
+   text-decoration: inherit;
+   cursor:pointer;
 }
 a:hover {
-  color: #535bf2;
+   color: #535bf2;
 }
 
-body {
+h1,h2,h3,h4,h5,h6 {
    margin: 0;
-   min-width: 320px;
-   min-height: 100vh;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-      margin: 0;
 }
 h1 {
    font-size: 3.2em;
    line-height: 1.1;
 }
-
 p {
    max-width:82ch;
 }
@@ -98,15 +88,18 @@ button {
    font-family: inherit;
    background-color: #1a1a1a;
    cursor: pointer;
+   
+   -webkit-transition: border-color 0.25s;
+   -o-transition: border-color 0.25s;
    transition: border-color 0.25s;
 }
 button:hover {
    border-color: #646cff;
 }
-button:focus,
+/* button:focus,
 button:focus-visible {
    outline: 4px auto -webkit-focus-ring-color;
-}
+} */
 
 .card {
    padding: 2em;
@@ -124,21 +117,21 @@ button:focus-visible {
       background-color: #f9f9f9;
    }
 }
+
 #app {
-   max-width: 100%;
-   margin: 0 auto;
-   padding: 0;
+   position:relative;
+   width:100%;
+   height:100%;
+   margin:0;
+   padding:0;
 }
-.app {
-   max-width: 1280px;
-   margin: 0 auto;
-   text-align: center;
-   width: 100%;
-   border: solid 1px orange;
-   padding: 0;
-}
+
 main {
-   width: 100%;
+   width:100%;
+   height:100%;
+   min-height:100vh;
+   padding:0;
+   margin:0;
 }
 ul {
    list-style: none;
@@ -147,57 +140,107 @@ ul {
    cursor: pointer;
 }
 
+/* 
+   grid utilities
+*/
 .grid {
-  display: grid;
+   display:-ms-grid;
+   display: grid;
 }
 .section_grid {
+   -ms-grid-columns:repeat(4, 1fr);
    grid-template-columns: repeat(4, 1fr);
 }
 
+/* 
+   flex utilities
+*/
 .flex {
+   display:-webkit-box;
+   display:-ms-flexbox;
    display: flex;
 }
 .flex_col {
+   -webkit-box-orient:vertical;
+   -webkit-box-direction:normal;
+   -ms-flex-direction:column;
    flex-direction: column;
 }
 .flex_row {
+   -webkit-box-orient:horizontal;
+   -webkit-box-direction:normal;
+   -ms-flex-direction:row;
    flex-direction: row;
 }
 .flex_wrap {
+   -ms-flex-wrap: wrap;
    flex-wrap: wrap;
 }
 .gap_1 {
    gap: 1rem;
 }
 .space_between {
+   -webkit-box-pack: justify;
+   -ms-flex-pack: justify;
    justify-content: space-between;
 }
 .justify-end {
-   justify-content: end;
+   -webkit-box-pack:flex-end;
+   -ms-flex-pack:flex-end;
+   justify-content:flex-end;
+}
+.justify_center {
+   -webkit-box-pack:center;
+   -ms-flex-pack:center;
+   justify-content:center;
+}
+.justify_end {
+   -webkit-box-pack:flex-end;
+   -ms-flex-pack:flex-end;
+   justify-content:flex-end;
+}
+.justify_around {
+   -ms-flex-pack:distribute;
+   justify-content:space-around;
+}
+.align_items_center {
+   -webkit-box-align:center;
+   -ms-flex-align:center;
+   align-items:center;
+}
+.align_self_end {
+   -ms-flex-item-align:end;
+   align-self:flex-end;
 }
 
-.m_1 {
-   margin: 1rem;
-}
-.mx_1 {
-   margin-left: 1rem;
-   margin-right: 1rem;
-}
-.p_1 {
-   padding: 1rem;
-}
-.p_0\.5 {
-   padding: 0.5rem;
-}
-.py_0\.5 {
-   padding-top: 0.5rem;
-   padding-bottom: 0.5rem;
-}
+/* 
+   spacing utilities
+*/
+.m_1     {margin:1rem;}
+.m_2     {margin:2rem;}
+.mx_1    {margin-left: 1rem;margin-right: 1rem;}
+
+.p_1     {padding: 1rem;}
+.p_0\.5  {padding: 0.5rem;}
+.py_0\.5 {padding-top: 0.5rem;padding-bottom: 0.5rem;}
+
 
 .bordered {
    border: solid 1px lightgrey;
 }
 
+/* 
+   position utilities
+*/
+.fixed {
+   position:fixed;
+}
 .relative {
    position: relative;
 }
+
+/*
+   text utilities
+*/
+.grey_text  {color:grey;}
+.italic     {font-style:italic;}
