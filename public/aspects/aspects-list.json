@@ -1,245 +1,57 @@
 [
    {
-      "title":"A Vue To A Build",
-      "slug":"a-vue-to-a-build",
-      "status":"early days",
-      "file":"",
-      "tagline":"Static Vue.js Learning Site",
-      "desc":[
-         "Evolving guide to Vue.js"
-      ],
-      "img":"",
-      "alt":"",
-      "github":"https://github.com/kevinjapan/a-vue-to-a-build",
-      "site":"",
-      "tech":[
-         {"name":"Vue.js"},
-         {"name":"JavaScript"},
-         {"name":"Markdown"}
-      ]
+      "title":"intro",
+      "route":"/aspects/intro",
+      "order":100
    },
    {
-      "title":"Portfolio",
-      "slug":"portfolio",
-      "status":"on-going",
-      "file":"",
-      "tagline":"Static Portfolio Site",
-      "desc":[
-         "Personal portfolio static site."
-      ],
-      "img":"edk-portfolio-homepage.jpg",
-      "alt":"image of portfolio static site homepage",
-      "github":"https://github.com/kevinjapan/edk-portfolio",
-      "site":"",
-      "tech":[
-         {"name":"Vue.js"},
-         {"name":"TypeScript"},
-         {"name":"Markdown"}
-      ]
+      "title":"what you need to know",
+      "route":"/aspects/what-you-need-to-know",
+      "order":200
    },
    {
-      "title":"WeeSongs",
-      "slug":"weesongs",
-      "status":"on-going",
-      "file":"",
-      "tagline":"Song Catalog",
-      "desc":[
-         "Front-end application for cataloging a SongWriter's collection."
-      ],
-      "img":"weesongs-homepage.jpg",
-      "alt":"image of WeeSongs website homepage",
-      "github":"https://github.com/kevinjapan/weesongs",
-      "site":"",
-      "tech":[
-         {"name":"Vue.js"},
-         {"name":"JavaScript"}
-      ]
+      "title":"the goal",
+      "route":"/aspects/the-goal",
+      "order":300
    },
    {
-      "title":"Signal Tower Capture",
-      "slug":"signal-tower-capture",
-      "status":"on-going",
-      "file":"signal-tower-capture.md",
-      "tagline":"Local Collections",
-      "desc":[
-         "Desktop collections solution for managing files and folders on your local machine."
-      ],
-      "img":"stc-homepage.jpg",
-      "alt":"image of Signal Tower Capture application",
-      "github":"https://github.com/kevinjapan/SignalTowerCapture",
-      "site":"",
-      "tech":[
-         {"name":"Electron"},
-         {"name":"JavaScript"},
-         {"name":"Node.js"},
-         {"name":"SQLite"}
-      ]
+      "title":"an early challenge",
+      "route":"/aspects/an-early-challenge",
+      "order":400
    },
    {
-      "title":"Outline CSS",
-      "slug":"outlinecss",
-      "status":"on-going",
-      "file":"",
-      "tagline":"component framework",
-      "desc":[
-         "Deploy component styling rapidly."
-      ],
-      "img":"outline-css-homepage.jpg",
-      "alt":"image of Outline CSS homepage",
-      "github":"https://github.com/kevinjapan/OutlineCSS",
-      "site":"https://outlinecss.netlify.app/",
-      "tech":[
-         {"name":"CSS"}
-      ]
+      "title":"build step",
+      "route":"/aspects/build-step",
+      "order":500
    },
    {
-      "title":"Barebones Router",
-      "slug":"barebones-router",
-      "status":"completed",
-      "file":"",
-      "tagline":"PHP Router Class",
-      "desc":[
-         "Single PHP Class for simple routing."
-      ],
-      "img":"barebonesrouter.jpg",
-      "alt":"image of BareBonesRouter code",
-      "github":"https://github.com/kevinjapan/Barebones-PHP-Router",
-      "site":"",
-      "tech":[
-         {"name":"PHP"}
-      ]
+      "title":"the vue component",
+      "route":"/aspects/the-vue-component",
+      "order":600
    },
    {
-      "title":"Wed Dev Agent",
-      "slug":"web-dev-agent",
-      "status":"on-going",
-      "file":"",
-      "tagline":"for Web Agencies",
-      "desc":[
-         "WordPress Theme and Plugins",
-         "for Web Dev Agencies."
-      ],
-      "img":"wda-homepage.jpg",
-      "alt":"image of Web Dev Agent website homepage",
-      "github":"https://github.com/kevinjapan/Web-Dev-Agent",
-      "site":"https://web-dev-agent.netlify.app/",
-      "tech":[
-         {"name":"WordPress"},
-         {"name":"PHP"}
-      ]
+      "title":"the template",
+      "route":"/aspects/the-template",
+      "order":700
    },
    {
-      "title":"The Educator",
-      "slug":"the-educator",
-      "status":"on-going",
-      "file":"",
-      "tagline":"for Education websites",
-      "desc":[
-         "WordPress Theme and Plugins",
-         "for colleges and online learning."
-      ],
-      "img":"te-homepage.jpg",
-      "alt":"image of The Educator website homepage",
-      "github":"https://github.com/kevinjapan/The-Educator",
-      "site":"https://the-educator.netlify.app/",
-      "tech":[
-         {"name":"WordPress"},
-         {"name":"PHP"}
-      ]
+      "title":"reactivity",
+      "route":"/aspects/reactivity",
+      "order":800
    },
    {
-      "title":"WeeProjects",
-      "slug":"weeprojects",
-      "status":"parked",
-      "file":"",
-      "tagline":"Project Management",
-      "desc":[
-         "Client React project management application."
-      ],
-      "img":"weeprojects-homepage.jpg",
-      "alt":"image of WeeProjects website homepage",
-      "github":"https://github.com/kevinjapan/weeprojects",
-      "site":"",
-      "tech":[
-         {"name":"React.js"},
-         {"name":"JavaScript"},
-         {"name":"MySQL"},
-         {"name":"Tailwind"}
-      ]
+      "title":"using html attributes",
+      "route":"/aspects/using-html-attributes",
+      "order":900
    },
    {
-      "title":"WeeProjects API",
-      "slug":"weeprojects-api",
-      "status":"parked",
-      "file":"",
-      "tagline":"PHP MVC Backend",
-      "desc":[
-         "Simple Model-View-Controller back-end with routing and authentication."
-      ],
-      "img":"",
-      "alt":"",
-      "github":"https://github.com/kevinjapan/WeeProjects-Backend",
-      "site":"",
-      "tech":[
-         {"name":"PHP"},
-         {"name":"MySQL"}
-      ]
+      "title":"connecting components",
+      "route":"/aspects/connecting",
+      "order":1000
    },
    {
-      "title":"Kanji Study Sets",
-      "slug":"kanji-study-sets",
-      "status":"on-going",
-      "file":"",
-      "tagline":"Japanese Kanji study site",
-      "desc":[
-         "More than 2000 regular use Kanji listed."
-      ],
-      "img":"kss-homepage.jpg",
-      "alt":"image of Kanji Study Sets website homepage",
-      "github":"",
-      "site":"https://kanjistudysets.netlify.app/",
-      "tech":[
-         {"name":"React.js"},
-         {"name":"JavaScript"},
-         {"name":"JSON"}
-      ]
-   },
-   {
-      "title":"The English Shelf",
-      "slug":"the-english-shelf",
-      "status":"on-going",
-      "file":"",
-      "tagline":"English Lesson Share",
-      "desc":[
-         "Lesson sharing for teachers",
-         "of English as a second language."
-      ],
-      "img":"tes-homepage.jpg",
-      "alt":"image of The English Shelf website homepage",
-      "github":"https://github.com/kevinjapan/theenglishshelf",
-      "site":"https://theenglishshelf.netlify.app/",
-      "tech":[
-         {"name":"React.js"},
-         {"name":"JavaScript"},
-         {"name":"JSON"}
-      ]
-   },
-   {
-      "title":"Delicous Demo",
-      "slug":"delicious-demo",
-      "status":"completed",
-      "file":"",
-      "tagline":"Demo delicatessen site",
-      "desc":[
-         "Static site with Intersection Observers and custom text-file configuration."
-      ],
-      "img":"delicious-homepage.jpg",
-      "alt":"image of delicious demo website homepage",
-      "github":"",
-      "site":"https://delicious-demo.netlify.app/",
-      "tech":[
-         {"name":"React.js"},
-         {"name":"Intersection Observer"}
-      ]
+      "title":"styling",
+      "route":"/aspects/styling",
+      "order":2000
    }
 ]

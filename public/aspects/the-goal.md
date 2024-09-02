@@ -49,7 +49,7 @@ from *SubComponent* into the template of the *MainComponent*.
 ### the glue
 The main glue for linking our HTML to the underlying JavaScript application is **reactivity** -
 whereby "Vue automatically tracks JavaScript **state** changes and efficiently updates the **DOM** 
-when changes happen." [^1^](#1)
+when changes happen." [^1^](#123)
 
 to connect your html page with the underlying javascript
 and build a component-based application
@@ -75,6 +75,6 @@ how?
 \
 \
 &nbsp;references
-###### [1](https://vuejs.org/guide/introduction.html#what-is-vue) 
+##### [123](https://vuejs.org/guide/introduction.html#what-is-vue) 
 [https://vuejs.org/guide/introduction.html#what-is-vue](https://vuejs.org/guide/introduction.html#what-is-vue)
 
