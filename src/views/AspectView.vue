@@ -3,16 +3,22 @@ import { ref, watchEffect } from 'vue'
 import { useRouter, useRoute } from 'vue-router'
 import { useAspectsStore } from '@/stores/aspectsStore'
 import markdownit from 'markdown-it'
-import markdownitSup from 'markdown-it-sup'
-import markdownitAnchor from 'markdown-it-anchor'
 
+// to do : temp disable - trying to fix 'not working in safari' bug
+// import markdownitSup from 'markdown-it-sup'
+// import markdownitAnchor from 'markdown-it-anchor'
+
+import AspectsNav from '../components/Aspects/AspectsNav/AspectsNav.vue'
+
+
+// AspectView
 
 const router = useRouter()
 const route = useRoute()
 const aspectsStore = useAspectsStore()
 const notify_msg = ref('')
 
-const md = markdownit().use(markdownitSup).use(markdownitAnchor)
+const md = markdownit()    //.use(markdownitSup).use(markdownitAnchor)
 const rawHtml = ref('')
 
 watchEffect(async() => {
@@ -35,22 +41,16 @@ watchEffect(async() => {
    } 
 })
 
-// to do : 'next' page - link to order/toc in left-nav
-
 // to do : make links target="_blank"
 
 </script>
 
 <template>
-
    <section class="aspect_view">
-
       <div class="markdown_content" v-html="rawHtml"></div>
-      
+      <AspectsNav :current_slug="route.params.aspectslug"/>      
       <AppStatus v-model="notify_msg" />
-
-   </section>
-   
+   </section>   
 </template>
 
 
@@ -58,9 +58,8 @@ watchEffect(async() => {
 
 /*
 'scoped' styles don't get applied to the rawHtml we generate from markdown
-so we need to pre-set these styles earlier - see markdown.css
+so we need to pre-set these styles earlier - see markdown css
 */
-
 
 section.aspect_view {
    width:100%;
@@ -69,8 +68,6 @@ section.aspect_view {
    padding:0;
    text-align:left;
 }
-
-
 section.aspect_view {
    padding:1rem;
 }
