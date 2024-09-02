@@ -3,9 +3,20 @@
    they are not picked up by the raw html generated from markdown (timing/order issue)
 */
 div.markdown_content {
+
+   display:-webkit-box;
+   display:-ms-flexbox;
    display:flex;
+
+   -webkit-box-orient:vertical;
+   -webkit-box-direction:normal;
+   -ms-flex-direction:column;
    flex-direction:column;
+
+   -webkit-box-align:center;
+   -ms-flex-align:center;
    align-items:center;
+
    width:100%;
    margin:0;
    padding:0;
@@ -30,7 +41,11 @@ div.markdown_content {
 /* markdown-it doesn't support superscript - for now, we adapt h6 for this purpose */
 .markdown_content h6 {
    background:lightblue;
+   
+   width:-webkit-fit-content;
+   width:-moz-fit-content;
    width:fit-content;
+
    display:inline;
 }
 .markdown_content blockquote  {
@@ -52,9 +67,9 @@ div.markdown_content {
 }
 .markdown_content code {
    width:100%;
-   font-size:.9rem;
    margin:0;
    overflow-x:auto;
+   font-size:.9rem;
 }
 /* we set element-specific widths for pre/code combo */
 @media (min-width: 520px) {.markdown_content pre {width:500px}}
