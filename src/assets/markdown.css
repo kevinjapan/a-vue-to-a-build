@@ -48,9 +48,9 @@ div.markdown_content {
 
    display:inline;
 }
-.markdown_content blockquote  {
+/* .markdown_content blockquote  {
    background:yellow;
-}
+} */
 
 /* 
    pre/code examples
@@ -96,6 +96,5 @@ div.markdown_content {
    font-weight:bold;
 }
 .markdown_content sup {
-   background:yellow;
    padding:0 .25rem;
 }

@@ -6,7 +6,6 @@ const copyright_date = ref(today.getFullYear())
 
 </script>
 
-
 <template>
 
    <section>
@@ -16,14 +15,12 @@ const copyright_date = ref(today.getFullYear())
 </template>
 
 <style scoped>
-
 section {
    width:100%;
-   text-align:center;
    margin:auto;
    padding:2rem;
    background:hsl(0, 0%, 95%);
    font-size:.95rem;
+   text-align:center;
 }
-
 </style>
