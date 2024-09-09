@@ -3,11 +3,8 @@ import { ref, watchEffect } from 'vue'
 import { useRouter, useRoute } from 'vue-router'
 import { useAspectsStore } from '@/stores/aspectsStore'
 import markdownit from 'markdown-it'
-
-// to do : temp disable - trying to fix 'not working in safari' bug
-// import markdownitSup from 'markdown-it-sup'
-// import markdownitAnchor from 'markdown-it-anchor'
-
+import markdownitSup from 'markdown-it-sup'
+import markdownitAnchor from 'markdown-it-anchor'
 import AspectsNav from '../components/Aspects/AspectsNav/AspectsNav.vue'
 
 
@@ -18,7 +15,7 @@ const route = useRoute()
 const aspectsStore = useAspectsStore()
 const notify_msg = ref('')
 
-const md = markdownit()    //.use(markdownitSup).use(markdownitAnchor)
+const md = markdownit().use(markdownitSup).use(markdownitAnchor)
 const rawHtml = ref('')
 
 watchEffect(async() => {
