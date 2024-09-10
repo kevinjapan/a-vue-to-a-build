@@ -6,7 +6,7 @@ import markdownit from 'markdown-it'
 import markdownitSup from 'markdown-it-sup'
 import markdownitAnchor from 'markdown-it-anchor'
 import AspectsNav from '../components/Aspects/AspectsNav/AspectsNav.vue'
-
+import init_markdown_links from '../utilities/initMarkdownLinks/initMarkdownLinks'
 
 // AspectView
 
@@ -16,6 +16,9 @@ const aspectsStore = useAspectsStore()
 const notify_msg = ref('')
 
 const md = markdownit().use(markdownitSup).use(markdownitAnchor)
+init_markdown_links(md)
+
+
 const rawHtml = ref('')
 
 watchEffect(async() => {
@@ -37,8 +40,6 @@ watchEffect(async() => {
       window.scroll(0,0)
    } 
 })
-
-// to do : make links target="_blank"
 
 </script>
 
