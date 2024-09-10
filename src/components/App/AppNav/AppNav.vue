@@ -1,12 +1,13 @@
 <script setup>
 import { ref, onBeforeMount } from 'vue'
-import { useRouter } from 'vue-router'
+import { useRouter, useRoute } from 'vue-router'
 import { useAspectsStore } from '@/stores/aspectsStore'
 
 
 // AppNav
 
 const router = useRouter()
+const route = useRoute()
 const aspectsStore = useAspectsStore()
 const aspects_list = ref([])
 const main_nav_open = ref(false)
@@ -28,7 +29,9 @@ const toggle_main_nav = () => {
    main_nav_open.value = main_nav_open.value === true ? false : true
 }
 
-// to do : highlight selected element in nav list
+const link_classes = (aspect_obj) => ({
+   selected_link: aspect_obj.route === `/aspects/${route.params.aspectslug}`
+})
 
 </script>
 
@@ -39,7 +42,7 @@ const toggle_main_nav = () => {
       </div>
       <nav class="main_nav" :class="{main_nav_open: main_nav_open === true}">
          <ul>
-            <li v-for="aspect in aspects_list" :key="aspect.title">
+            <li v-for="aspect in aspects_list" :key="aspect.title" :class="link_classes(aspect)">
                <a @click="open_nav_link(aspect.route)">{{ aspect.title }}</a>
             </li>
          </ul>
@@ -82,6 +85,8 @@ ul {
    display:-webkit-box;
    display:-ms-flexbox;
    display:flex;
+
+   gap:.35rem;
    
    -webkit-box-orient:vertical;
    -webkit-box-direction:normal;
@@ -116,6 +121,7 @@ nav {
 }
 nav a {
    display: inline-block;
+   width:100%;
    padding: 0 1rem;
    border-left: 1px solid var(--color-border);
 }
@@ -124,6 +130,15 @@ nav a.router-link-exact-active {
 }
 nav a.router-link-exact-active:hover {
    background-color: transparent;
+}
+
+li.selected_link a {
+   font-weight:500;
+   background:hsl(0, 0%, 94%);
+}
+
+li a:hover {
+   background:hsl(0, 0%, 97%);
 }
 
 
