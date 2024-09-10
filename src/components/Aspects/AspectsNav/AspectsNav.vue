@@ -25,14 +25,14 @@ watch(() => props.current_slug,() => {
 })
 
 onMounted(() => {
+
    const slug_navs = aspectsStore.slug_navs(props.current_slug)
-   setTimeout(() => hydrate(slug_navs),200)
+
+   // we delay calls to hydrate for page to load markdown
+   // slug_nav is undefined if either end index of array
+   setTimeout(() => hydrate(slug_navs),400)
+
 })
-
-// we delay calls to hydrate for page to load markdown
-// slug_nav is undefined if either end index of array
-
-// to do : grey_text italic is still momentarily flashing at top of page
 
 const hydrate = (slug_navs) => {
    prev.value = slug_navs.prev
@@ -51,3 +51,14 @@ const open_nav_link = route => router.push(route)
    </section>
 </template>
 
+<style scoped>
+a {
+   padding:.35rem;
+   padding-left:.5rem;
+   padding-right:.5rem;
+}
+a:hover {
+   font-weight:500;
+   background:hsl(0, 0%, 94%);
+}
+</style>
