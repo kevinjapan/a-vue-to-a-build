@@ -89,8 +89,12 @@ div.markdown_content {
 }
 .markdown_content p > a {
    padding:0;
-   margin-bottom:12rem;
+   padding-left:.25rem;
+   padding-right:.25rem;
    color:blue;
+}
+.markdown_content p > a:hover {
+   background:hsl(0, 0%, 94%);
 }
 .markdown_content strong {
    font-weight:bold;
